@@ -116,10 +116,10 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
     node {
         name "O=Notary,L=London,C=GB"
         notary = [validating: false]
-        p2pPort 10002
+        p2pPort 10001
         rpcSettings {
-            address("localhost:10003")
-            adminAddress("localhost:10043")
+            address("localhost:10002")
+            adminAddress("localhost:10003")
         }
         cordapps = [
                 "$project.group:cdm-support-contracts-states:$project.version",
@@ -131,12 +131,12 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
     }
     node {
         name "O=Client1,L=New York,C=US"
-        p2pPort 10005
+        p2pPort 10011
         rpcSettings {
-            address("localhost:10006")
-            adminAddress("localhost:10046")
+            address("localhost:10012")
+            adminAddress("localhost:10013")
         }
-        webPort 10007
+        webPort 10014
         cordapps = [
                 "$project.group:cdm-support-contracts-states:$project.version",
                 "$project.group:cdm-support:$project.version",
@@ -148,12 +148,12 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
     }
     node {
         name "O=Broker1,L=New York,C=US"
-        p2pPort 10008
+        p2pPort 10021
         rpcSettings {
-            address("localhost:10009")
-            adminAddress("localhost:10049")
+            address("localhost:10022")
+            adminAddress("localhost:10023")
         }
-        webPort 10010
+        webPort 10024
         cordapps = [
                 "$project.group:cdm-support-contracts-states:$project.version",
                 "$project.group:cdm-support:$project.version",
@@ -165,12 +165,12 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
     }
     node {
         name "O=Broker2,L=New York,C=US"
-        p2pPort 10011
+        p2pPort 10031
         rpcSettings {
-            address("localhost:10012")
-            adminAddress("localhost:10052")
+            address("localhost:10032")
+            adminAddress("localhost:10033")
         }
-        webPort 10013
+        webPort 10034
         cordapps = [
                 "$project.group:cdm-support-contracts-states:$project.version",
                 "$project.group:cdm-support:$project.version",
@@ -183,10 +183,10 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
     node {
         name "O=Observery,L=London,C=GB"
         notary = [validating: false]
-        p2pPort 10014
+        p2pPort 10041
         rpcSettings {
-            address("localhost:10015")
-            adminAddress("localhost:10055")
+            address("localhost:10042")
+            adminAddress("localhost:10043")
         }
         cordapps = [
                 "$project.group:cdm-support-contracts-states:$project.version",
